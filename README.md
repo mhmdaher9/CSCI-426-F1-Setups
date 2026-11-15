@@ -1,3 +1,5 @@
+**Live site:** https://csci-426-f1-setups.vercel.app/
+
 # Pitwall Setups
 
 A responsive React website that explains how Formula 1 teams set up a car for different circuits.
