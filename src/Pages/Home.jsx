@@ -23,9 +23,9 @@ function Home() {
       <section className="wrap features">
         <h2>What you can do here</h2>
         <div className="grid">
-          <article><h3>Compare circuits</h3><p>See how wings, ride height and brake bias change from Monza to Monaco.</p></article>
-          <article><h3>Learn the settings</h3><p>Plain-language explanations of every setup parameter.</p></article>
-          <article><h3>Open any setup</h3><p>Each circuit has its own page with the full sheet and the reasoning behind it.</p></article>
+          <div className="feature"><h3>Compare circuits</h3><p>See how wings, ride height and brake bias change from Monza to Monaco.</p></div>
+          <div className="feature"><h3>Learn the settings</h3><p>Plain-language explanations of every setup parameter.</p></div>
+          <div className="feature"><h3>Open any setup</h3><p>Each circuit has its own page with the full sheet and the reasoning behind it.</p></div>
         </div>
       </section>
     </>
