@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TrackItem from '../Components/TrackItem';
+import SetupDetail from './SetupDetail';
 import '../Styles/Setups.css';
 
 const filters = ['All', 'Low downforce', 'Medium downforce', 'High downforce'];
@@ -16,7 +17,12 @@ const glossary = [
 function Setups({ tracks }) {
   const [filter, setFilter] = useState('All');
   const [query, setQuery] = useState('');
+  const [selected, setSelected] = useState(null);
+
   const shown = tracks.filter(t => (filter === 'All' || t.type === filter) && t.name.toLowerCase().includes(query.toLowerCase()));
+
+  if (selected) return <SetupDetail track={selected} onBack={() => setSelected(null)} />;
+
   return (
     <section className="wrap">
       <h1>Track setups</h1>
@@ -25,7 +31,7 @@ function Setups({ tracks }) {
         <div className="chips">{filters.map(f => <button key={f} className={f === filter ? 'on' : ''} onClick={() => setFilter(f)}>{f}</button>)}</div>
       </div>
       <div className="grid">
-        {shown.map(t => <TrackItem key={t.id} track={t} />)}
+        {shown.map(t => <TrackItem key={t.id} track={t} onSelect={setSelected} />)}
       </div>
       {shown.length === 0 && <p>No circuits match. Clear the search or pick "All".</p>}
       <h2>Setup glossary</h2>

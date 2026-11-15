@@ -5,7 +5,6 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import Setups from './Pages/Setups';
-import SetupDetail from './Pages/SetupDetail';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 
@@ -51,7 +50,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/setups" element={<Setups tracks={tracks} />} />
-          <Route path="/setups/:id" element={<SetupDetail tracks={tracks} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
