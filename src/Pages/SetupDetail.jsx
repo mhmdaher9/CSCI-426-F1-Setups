@@ -11,7 +11,8 @@ function SetupDetail({ track, onBack }) {
   return (
     <section className="wrap">
       <button className="btn" onClick={onBack}>← Back to all setups</button>
-      <h1>{track.name} <small>{track.country}</small></h1>
+      <h1>{track.name}</h1>
+      <p className="info">{track.country} · {track.type}</p>
       <p className="lead">{track.summary}</p>
       <table className="sheet">
         <tbody>
