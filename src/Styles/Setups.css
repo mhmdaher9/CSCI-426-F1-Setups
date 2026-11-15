@@ -1,0 +1,39 @@
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.controls input {
+    max-width: 280px;
+}
+
+.chips button {
+    font: inherit;
+    border: 2px solid #101b2d;
+    background: none;
+    padding: .4rem .9rem;
+    margin: 0 .4rem .4rem 0;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.chips .on {
+    background: #101b2d;
+    color: #fff;
+}
+
+.glossary div {
+    padding: .8rem 0;
+    border-bottom: 1px solid #c4ccd6;
+}
+
+dt {
+    font-weight: 600;
+}
+
+dd {
+    margin: 0;
+    color: #4a586b;
+}
